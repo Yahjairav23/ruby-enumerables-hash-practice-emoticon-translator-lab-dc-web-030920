@@ -27,5 +27,6 @@ end
 def get_english_meaning(emoticons_file, emoticon)
   emoticon_library = load_library(emoticons_file)
   
-  emoticon_library["get_meaning"][emoticon]
+  if emoticon_library["get_meaning"][emoticon] == nil
+    return 
 end
